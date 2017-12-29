@@ -1,0 +1,18 @@
+.my-placeholder(@text-indent: 500px,@transition: text-indent 1s ease){
+		&::-webkit-input-placeholder {
+			text-indent: @text-indent;
+			transition: @transition;
+		}
+		&:-moz-placeholder {
+			text-indent: @text-indent;
+			transition: @transition;
+		}
+		&::-moz-placeholder {
+			text-indent: @text-indent;
+			transition: @transition;
+		}
+		&:-ms-input-placeholder {
+			text-indent: @text-indent;
+			transition: @transition;
+		}
+}

@@ -1,0 +1,144 @@
+html {
+  height: 100%;
+  background-color: white;
+}
+body {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  line-height: 1.5;
+  height: 100%;
+}
+.wrapper {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  background-color: #f8f8f8;
+  width: 100%;
+}
+header {
+  margin-bottom: 50px;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 990px;
+  }
+}
+nav {
+  float: left;
+}
+@media screen and (max-width: 583px) {
+  nav .active {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  nav {
+    float: none;
+  }
+}
+.add {
+  float: right;
+  text-align: right;
+}
+@media screen and (max-width: 583px) {
+  .add {
+    float: none;
+    text-align: center;
+  }
+}
+.btn span {
+  padding-right: 5px;
+}
+h1 {
+  color: #793862;
+  font-size: 18px;
+}
+h1::first-letter {
+  text-transform: capitalize;
+}
+.content {
+  padding: 0 15px;
+}
+.content h3 {
+  color: #272E71;
+}
+.content .story_content {
+  word-wrap: break-word;
+  background-color: white;
+  border: 2px solid #EEE;
+  margin: 10px 0;
+  padding: 15px;
+}
+.content .story_content h2 {
+  margin-top: 0;
+  padding: 6px 0;
+  font-size: 18px;
+}
+.content .story_content .info {
+  font-size: 12px;
+  color: grey;
+}
+.content .story_content ::first-letter {
+  text-transform: capitalize;
+}
+.content .preview {
+  text-align: center;
+  font-size: xx-large;
+  margin-bottom: 30px;
+}
+.content .btn-primary {
+  float: right;
+  margin: 20px 0;
+}
+.content .btn-info {
+  float: right;
+  margin: 20px 5px 20px 0;
+}
+@media screen and (max-width: 480px) {
+  .content .btn-info {
+    float: none;
+  }
+}
+.content p.col-xs-6 {
+  text-indent: 5%;
+  text-align: justify;
+}
+.content .modal-footer .btn-primary {
+  margin: 0 0 0 5px;
+}
+.addStory .hp {
+  text-align: center;
+  padding: 0 20px;
+}
+.addStory .error {
+  color: red;
+}
+.form-horizontal {
+  margin: 0 auto;
+  padding: 20px;
+}
+.form-horizontal .control-label {
+  text-align: left;
+}
+.form-horizontal div.form-group span {
+  padding: 0 15px;
+}
+.form-horizontal div.form-group label.radio-inline.main-tooltip {
+  cursor: help;
+}
+.title {
+  text-align: right;
+}
+footer {
+  display: table-row;
+  height: 15%;
+  width: 100%;
+}
+footer div {
+  margin: 0 15px;
+}
+footer .footer {
+  padding-top: 5%;
+  border-top: 1px solid darkgray;
+}

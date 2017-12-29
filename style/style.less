@@ -1,0 +1,127 @@
+@import "../node_modules/lesshat/lesshat.less";
+@import "library";
+
+@bg_color: #1E569F;
+@btn_w: 100px;
+@font_s: 24px;
+@font_f: "Gabriola";
+
+.mixin(@key) when (@key = 1){
+  border: 1px solid green;
+  .box-shadow(0 0 8px green);
+}
+.mixin(@key) when (@key =2){
+  border: 1px solid red;
+  .box-shadow(0 0 8px red);
+}
+.mixin(@key) when (@key =3){
+  border-color: @bg_color;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  .background-image(linear-gradient(to top,@bg_color,white 60%));
+  font-family: @font_f;
+  text-align: center;
+}
+
+.preload {
+  .transition(none) !important;
+}
+
+*:focus{
+  outline: none;
+  .mixin(3);
+}
+
+div {
+  position: relative;
+  width: 32%;
+  margin: 0 auto;
+  padding-top: 300px;
+  @media screen and (max-width: 1300px) {
+    width: 45%;
+  }
+
+  h4 {
+    margin: 0;
+    color: @bg_color - #222;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: @font_s*2;
+    text-shadow: 1px 2px 2px @bg_color;
+    .transition(all .5s linear);
+
+    &:hover {
+      cursor:pointer;
+      opacity: 0;
+    }
+  }
+
+  form {
+    width: 100%;
+    margin: 10% auto;
+    padding: 15px 0;
+    border: solid 3px lighten(@bg_color, 50%);
+    background: white;
+    .border-radius(7);
+    .box-shadow(0 10 13 darken(@bg_color, 20%));
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .transform(rotate(0deg) scale(0));
+    .transition(all .5s linear .5s);
+
+    p{
+      margin: 0;
+      text-align: center;
+      color: @bg_color - #222;
+      font-size: @font_s;
+      &:first-letter{
+        font-size: xx-large;
+      };
+    }
+
+    input {
+      width: 60%;
+      padding: 7px;
+      .box-shadow(inset 0 2px 5px darken(@bg_color, 10%));
+      .placeholder(@bg_color);
+      .border-radius(5 10);
+
+      &:required:valid {
+       .mixin(1);
+      }
+      &:focus:invalid {
+        .mixin(2);
+      }
+
+    }
+
+    .btn {
+      width: @btn_w;
+      height: round(@btn_w/3);
+      padding: 0;
+      //border: none;
+      .border-radius(5);
+      .background-image(linear-gradient(to top, saturate(@bg_color, 15%), lighten(@bg_color, 40%)));
+      color: white;
+      text-shadow: 1px 1px 1px darken(@bg_color, 10%);
+      font-family: @font_f;
+      font-size: @font_s;
+      line-height: @font_s;
+      .mixin(3);
+      &:hover {
+        cursor: pointer;
+        .background-image(linear-gradient(to top, contrast(lighten(@bg_color, 60%)), saturate(@bg_color, 35%)));
+      }
+    }
+  }
+
+  &:hover form {
+    .transform(rotate(360deg) scale(1));
+  }
+}

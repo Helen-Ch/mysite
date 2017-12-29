@@ -1,0 +1,42 @@
+.pic {
+	width: 33.3333%;
+	float: left;
+	line-height: 1px;
+	position: relative;
+	overflow: hidden;
+
+	.fon {
+		background-image:url(/images/bg-black.png);
+		background-repeat:repeat;
+		background-position:top left;
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		opacity:0.0;
+		&:hover  {
+			opacity:0.3;
+		}
+	}
+
+
+	a {
+		display: inline-block;
+		width: 100%;
+		transition: all 0.3s ease-out;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	a > img {
+		width: 100%;
+		overflow: hidden;
+	}
+	.zoom {
+		position:absolute;
+		left:37%;
+		top:37%;
+	}
+}
+

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin
+Disallow: /modules
+Disallow: /libs
+Disallow: /vendor
+Disallow: /config.php
+Disallow: /variables.php

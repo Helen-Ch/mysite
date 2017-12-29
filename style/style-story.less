@@ -1,0 +1,79 @@
+@import "../node_modules/lesshat/lesshat.less";
+@import "library";
+html{
+height: 100%;
+}
+body{
+	width: 100%;
+	max-width: 990px;
+	margin: 0 auto;
+	line-height: 1.5;
+	background-color: #f8f8f8;
+	height: 100%;
+}
+.wrapper{
+display: table;
+	height: 100%;
+	width: 100%;
+}
+header{
+	margin-bottom: 50px;
+}
+
+.container{
+	@media (min-width: 1200px)	{
+	width: 990px;
+}
+}
+nav{
+	float: left;
+}
+.add{
+	float: right;
+	text-align: right;
+}
+
+.btn span{
+	padding-right: 5px;
+}
+
+#content {
+	padding: 0 20px 0 20px;
+
+	.story_content{
+		h2{
+			margin-top: 0;
+			padding: 6px 0;
+			font-size: 18px;
+		}
+		background-color: white;
+		border: 2px solid #EEE;
+		margin: 10px;
+		padding: 15px;
+		.info{
+			font-size: 12px;
+			color: grey;
+		}
+	}
+}
+.addStory {
+	.hp{
+		text-align: center;
+	}
+}
+.form-horizontal {
+	margin: 0 auto;
+	.control-label {
+		text-align: left;
+		//padding-left: 0;
+		//padding-right: 0;
+	}
+
+}
+	.title{
+		text-align: right;
+	}
+	footer{
+		display: table-row;
+		height: 15%;
+	}

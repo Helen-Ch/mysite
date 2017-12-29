@@ -1,0 +1,163 @@
+@import "../node_modules/lesshat/lesshat.less";
+@import "library";
+
+.clearfix {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+html, body {
+	padding: 0;
+	height: 100%;
+	@media screen and (max-width: 480px) {
+		font-size: 16px;
+	}
+}
+
+.container{
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.logo {
+	background-color: #151520;
+	padding:20px 0;
+	@media screen and (max-width: 768px) {
+		padding-left: 10px;
+	}
+	@media screen and (max-width: 480px) {
+		text-align: right;
+		padding-right: 10px;
+	}
+}
+
+nav {
+	width: 100%;
+	background-color: #454550;
+	::first-letter {
+		text-transform: uppercase;
+	}
+	@media screen and (max-width: 480px) {
+		display: none;
+		margin-top: 0;
+	}
+	@media screen and (min-width: 480px) {
+		display: block !important;
+	}
+}
+
+.nav{
+	margin: 0 auto;
+}
+
+.nav-pills>li{
+	@media screen and (max-width: 480px) {
+		float: none;
+	}
+}
+
+.nav-pills>li>a{
+	border-radius: 0;
+}
+
+.nav-pills>li+li{
+	margin-left: 0;
+}
+
+.nav>li>a {
+	padding: 15px 25px;
+}
+
+.mini-menu {
+	display: none;
+	@media screen and (max-width: 480px) {
+		display: block;
+		text-align: center;
+		cursor: pointer;
+		width: 15%;
+		float: left;
+		color: white;
+		font-size: 36px;
+	}
+	&:hover {
+		color: #3a768f;
+	}
+}
+
+
+.row {
+	margin: 40px auto 0 auto;
+	padding: 20px 0;
+	border: solid 1px #DDDDDD;
+	border-bottom: none;
+}
+
+.col-lg-7{
+	font-size: 18px;
+}
+
+.col-lg-5 {
+	text-align: right;
+	span {
+		padding-right: 10px;
+	}
+}
+
+.col-xs-12{
+	@media screen and (max-width: 480px) {
+		a {
+			display: block;
+			margin: 5px auto;
+			width: 52%;
+			text-align: justify;
+			padding: 6px;
+		}
+		span{
+			padding-right: 6px;
+		}
+	}
+}
+
+main {
+	input{
+		font-size: 12px;
+	}
+	.remove{
+		color: red;
+	}
+	table span{
+		padding-right: 5px;
+	}
+}
+
+.ui-datepicker-title{
+	color: #333333;
+	}
+
+a.glyphicon-remove, span.glyphicon-remove{
+	color: red;
+}
+
+.wrapper {
+	max-width: 1110px; // по умолчанию для больших экранов
+	margin: 0 auto;
+	background: #FFFFFF;
+	min-height: 100%;
+	padding: 0 7.7% 40px 7.7%;
+	@media screen and (max-width: 1600px) {
+		width: 90%;
+	}
+}
+
+.carousel-control .glyphicon-chevron-left{
+	left: 15%;
+}
+.carousel-control .glyphicon-chevron-right{
+	right: 15%;
+}
