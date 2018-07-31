@@ -34,7 +34,22 @@
                     <td>Удалить фото</td>
                     <td><input type="submit" name="delete_image" value="удалить изображение" onclick="return del();"></td>
                 </tr>
+                <?php }
+                if (!empty($row['fb_user_id'])) {?>
+                <tr>
+                    <td>Удалить аккаунт Facebook</td>
+                    <td><input type="checkbox" name="fb_delete_id"></td>
+                    <td><?php if(isset($errors['fb_user_id'])) {echo $errors['fb_user_id'];} ?></td>
+                </tr>
+                <?php } else { ?>
+                <tr>
+                    <td>Добавить аккаунт Facebook
+                    </td>
+                    <td><input type="checkbox" name="fb_user_id"></td>
+                    <td><?php if(isset($errors['fb_user_id'])) {echo $errors['fb_user_id'];} ?></td>
+                </tr>
                 <?php } ?>
+                <tr>
                 <tr>
                     <td colspan="3">Дополнительная информация</td>
                 </tr>

@@ -39,6 +39,9 @@ if(isset ($_POST['edit'],  $_POST['password'], $_POST['login'], $_POST['email'])
     if (empty ($_POST['email'])  || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = 'Вы не заполнили адрес электронной почты!';
     }
+    if(!empty($_POST['fb_delete_id'])){
+
+    }
     if(!count($errors)) {
         $res = q("
             SELECT `id`
@@ -76,6 +79,7 @@ if(isset ($_POST['edit'],  $_POST['password'], $_POST['login'], $_POST['email'])
         `login`    = '" . mresAll($_POST['login']) . "',             
         `email`    = '" . mresAll($_POST['email']) . "'        
         ".((!empty($_POST['password'])) ? ",`password` = '".mresAll(myHash($_POST['password']))."'" : "")."
+        ".((!empty($_POST['fb_delete_id'])) ? ",`fb_user_id` = ''" : "'".mresAll($row['fb_user_id'])."' " )."
         ".((isset($avatar)) ? ",`image` = '".mresAll($avatar)."'" : "")."
         WHERE `login` = '".mresAll($_SESSION['user']['login'])."'                    
     ");

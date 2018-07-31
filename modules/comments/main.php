@@ -56,3 +56,4 @@ $res = q("
     }
 }
 $res = mysqli_query($link1, "SELECT * FROM `comments` ORDER BY `id`") or exit(mysqli_error($link1));*/
+

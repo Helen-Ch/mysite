@@ -41,7 +41,7 @@ if(isset($_POST['login'],$_POST['password'])) {
         exit();
     }*/
 }
-if(Core::$SKIN == 'default') {
+/*if(Core::$SKIN == 'default') {
     if (isset($_SESSION['user'])) {
         echo 'ok';
         exit();
@@ -49,7 +49,7 @@ if(Core::$SKIN == 'default') {
         echo 'no';
         exit();
     }
-}
+}*/
 
 
 

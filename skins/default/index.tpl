@@ -39,11 +39,12 @@
 				<a href="/form_calc.php" class="nav">calculator</a>
 				<a href="/chat" class="nav">chat</a>
                 <a href="/vatel" class="nav">Vatel</a>
+				<a href="/socials" class="nav">Socials</a>
 				<!--<a href="/cabinet/registration" class="nav">reg</a>
                     <a href="/cabinet/authorization" class="nav">auth</a> without JS-->
 				<?php if (isset($_SESSION['user']) ){ ?>
 					<!--<a href="/chat" class="nav">chat</a>-->
-					<?php if($_SESSION['user']['access'] == 5){ ?>
+					<?php if(!empty($_SESSION['user']['access']) && $_SESSION['user']['access'] == 5){ ?>
 						<a href="/admin" class="nav">admin</a>
 				<?php } } ?>
 				<div class="clear"></div>
@@ -65,7 +66,7 @@
 			<?php if(!isset($_SESSION['user'])){ ?>
 				<div id="come" class="enreg" onclick="slide('log'); hideShow('af'); slide('x');">Войти | Регистрация</div>
 			<?php  }else { ?>
-				<div id="in" class="enreg log" onclick="slide('user'); slide('x');">Здравствуйте, <?php echo hscAll($_SESSION['user']['login']); ?>!</div>
+				<div id="in" class="enreg log" onclick="slide('user'); slide('x');"><?php echo hscAll($_SESSION['user']['login']); ?></div>
 					<div class="usprof" id="user">
 						<a href="/static/user_profile" class="" id="prof">Профиль</a>
 						<a href="/cabinet/exit" class="" id="ex">Выход</a>
@@ -88,11 +89,12 @@
 				<a href="/form_calc.php" class="nav">calculator</a>
 				<a href="/chat" class="nav">chat</a>
                 <a href="/vatel" class="nav">Vatel</a>
+				<a href="/socials" class="nav">Socials</a>
 			<!--<a href="/cabinet/registration" class="nav">reg</a>
 				<a href="/cabinet/authorization" class="nav">auth</a> without JS-->
 				<?php if (isset($_SESSION['user']) ){ ?>
 					<!--<a href="/chat" class="nav">chat</a>-->
-					<?php if($_SESSION['user']['access'] == 5){ ?>
+					<?php if(!empty($_SESSION['user']['access']) && $_SESSION['user']['access'] == 5){ ?>
 					<a href="/admin" class="nav">admin</a>
 				<?php } } ?>
 				<div class="clear"></div>                
