@@ -35,17 +35,16 @@
                     <td><input type="submit" name="delete_image" value="удалить изображение" onclick="return del();"></td>
                 </tr>
                 <?php }
-                if (!empty($row['fb_user_id'])) {?>
+                if (!empty($row['fb_user_id'])) { ?>
                 <tr>
                     <td>Удалить аккаунт Facebook</td>
-                    <td><input type="checkbox" name="fb_delete_id"></td>
+                    <td><input type="checkbox" name="fb_id_delete" onchange="return del();"></td>
                     <td><?php if(isset($errors['fb_user_id'])) {echo $errors['fb_user_id'];} ?></td>
                 </tr>
                 <?php } else { ?>
                 <tr>
-                    <td>Добавить аккаунт Facebook
-                    </td>
-                    <td><input type="checkbox" name="fb_user_id"></td>
+                    <td><a href="<?php echo $path; ?>">Добавить аккаунт Facebook</a></td>
+                    <td></td>
                     <td><?php if(isset($errors['fb_user_id'])) {echo $errors['fb_user_id'];} ?></td>
                 </tr>
                 <?php } ?>
@@ -64,7 +63,7 @@
 
                 </tr>
             </table>
-            <p><input type="submit" name="edit" value="редактировать" class="button-user"><input type="submit" name="delete" value="удалить" class="button-user" onclick="return del();"></p>
+            <input type="submit" name="edit" value="редактировать" class="button-user"><input type="submit" name="delete" value="удалить пользователя" class="button-user" onclick="return del();">
         </form>
         <div class="clear"></div>
     <?php } ?>

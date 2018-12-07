@@ -226,7 +226,7 @@
 <!--подключаем  fancybox-->
 <link rel="stylesheet" href="/vendor/public/fancybox/dist/jquery.fancybox.min.css">
 <script src="/vendor/public/fancybox/dist/jquery.fancybox.min.js" defer></script>
-<script src="/js/vatel1.js" defer></script>
+<script src="/js/vatel.js" defer></script>
 <script type="application/ld+json">
     {
       "@context": "http://schema.org",

@@ -1,1 +1,152 @@
-.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}body,html{padding:0;height:100%}@media screen and (max-width:480px){body,html{font-size:16px}}.container{padding-right:0;padding-left:0}.logo{background-color:#151520;padding:20px 0}@media screen and (max-width:768px){.logo{padding-left:10px}}@media screen and (max-width:480px){.logo{text-align:right;padding-right:10px}}nav{width:100%;background-color:#454550}nav ::first-letter{text-transform:uppercase}@media screen and (max-width:480px){nav{display:none;margin-top:0}}@media screen and (min-width:480px){nav{display:block!important}}.nav{margin:0 auto}@media screen and (max-width:480px){.nav-pills>li{float:none}}.nav-pills>li>a{border-radius:0}.nav-pills>li+li{margin-left:0}.nav>li>a{padding:15px 25px}.mini-menu{display:none}@media screen and (max-width:480px){.mini-menu{display:block;text-align:center;cursor:pointer;width:15%;float:left;color:#fff;font-size:36px}}.mini-menu:hover{color:#3a768f}.row{margin:40px auto 0 auto;padding:20px 0;border:solid 1px #DDD;border-bottom:none}.col-lg-7{font-size:18px}.col-lg-5{text-align:right}.col-lg-5 span{padding-right:10px}@media screen and (max-width:480px){.col-xs-12 a{display:block;margin:5px auto;width:52%;text-align:justify;padding:6px}.col-xs-12 span{padding-right:6px}}main input{font-size:12px}main .remove{color:red}main table span{padding-right:5px}.ui-datepicker-title{color:#333}a.glyphicon-remove,span.glyphicon-remove{color:red}.wrapper{max-width:1110px;margin:0 auto;background:#FFF;min-height:100%;padding:0 7.7% 40px 7.7%}@media screen and (max-width:1600px){.wrapper{width:90%}}.carousel-control .glyphicon-chevron-left{left:15%}.carousel-control .glyphicon-chevron-right{right:15%}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+html,
+body {
+  padding: 0;
+  height: 100%;
+}
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+.container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.logo {
+  background-color: #151520;
+  padding: 20px 0;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .logo {
+    text-align: right;
+    padding-right: 10px;
+  }
+}
+nav {
+  width: 100%;
+  background-color: #454550;
+}
+nav ::first-letter {
+  text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  nav {
+    display: none;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 480px) {
+  nav {
+    display: block !important;
+  }
+}
+.nav {
+  margin: 0 auto;
+}
+@media screen and (max-width: 480px) {
+  .nav-pills > li {
+    float: none;
+  }
+}
+.nav-pills > li > a {
+  border-radius: 0;
+}
+.nav-pills > li + li {
+  margin-left: 0;
+}
+.nav > li > a {
+  padding: 15px 25px;
+}
+.mini-menu {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .mini-menu {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    width: 15%;
+    float: left;
+    color: white;
+    font-size: 36px;
+  }
+}
+.mini-menu:hover {
+  color: #3a768f;
+}
+.row {
+  margin: 40px auto 0 auto;
+  padding: 20px 0;
+  border: solid 1px #DDDDDD;
+  border-bottom: none;
+}
+.col-lg-7 {
+  font-size: 18px;
+}
+.col-lg-5 {
+  text-align: right;
+}
+.col-lg-5 span {
+  padding-right: 10px;
+}
+@media screen and (max-width: 480px) {
+  .col-xs-12 a {
+    display: block;
+    margin: 5px auto;
+    width: 52%;
+    text-align: justify;
+    padding: 6px;
+  }
+  .col-xs-12 span {
+    padding-right: 6px;
+  }
+}
+main input {
+  font-size: 12px;
+}
+main .remove {
+  color: red;
+}
+main table span {
+  padding-right: 5px;
+}
+.ui-datepicker-title {
+  color: #333333;
+}
+a.glyphicon-remove,
+span.glyphicon-remove {
+  color: red;
+}
+.wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  min-height: 100%;
+  padding: 0 7.7% 40px 7.7%;
+}
+@media screen and (max-width: 1600px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+.carousel-control .glyphicon-chevron-left {
+  left: 15%;
+}
+.carousel-control .glyphicon-chevron-right {
+  right: 15%;
+}
+/*# sourceMappingURL=style-bootstrap.css.map */

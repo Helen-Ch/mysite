@@ -39,9 +39,7 @@ if(isset ($_POST['edit'],  $_POST['password'], $_POST['login'], $_POST['email'])
     if (empty ($_POST['email'])  || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = 'Вы не заполнили адрес электронной почты!';
     }
-    if(!empty($_POST['fb_delete_id'])){
 
-    }
     if(!count($errors)) {
         $res = q("
             SELECT `id`
@@ -73,20 +71,27 @@ if(isset ($_POST['edit'],  $_POST['password'], $_POST['login'], $_POST['email'])
         }
     }
 
-    if (!count($errors)) {
-        q("
-        UPDATE `users` SET
-        `login`    = '" . mresAll($_POST['login']) . "',             
-        `email`    = '" . mresAll($_POST['email']) . "'        
-        ".((!empty($_POST['password'])) ? ",`password` = '".mresAll(myHash($_POST['password']))."'" : "")."
-        ".((!empty($_POST['fb_delete_id'])) ? ",`fb_user_id` = ''" : "'".mresAll($row['fb_user_id'])."' " )."
-        ".((isset($avatar)) ? ",`image` = '".mresAll($avatar)."'" : "")."
-        WHERE `login` = '".mresAll($_SESSION['user']['login'])."'                    
+  if (!count($errors)) {
+    q("
+      UPDATE `users` SET
+      `login`    = '" . mresAll($_POST['login']) . "',             
+      `email`    = '" . mresAll($_POST['email']) . "'        
+      " . ((!empty($_POST['password'])) ? ",`password` = '" . mresAll(myHash($_POST['password'])) . "'" : "") . "
+      " . ((!empty($_POST['fb_id_delete'])) ? ",`fb_user_id` = ''" : "") . "        
+      " . ((isset($avatar)) ? ",`image` = '" . mresAll($avatar) . "'" : "") . "
+      WHERE `login` = '" . mresAll($_SESSION['user']['login']) . "'                    
     ");
-        $_SESSION['info'] = 'Данные о пользователе были изменены!';
-        header("Location: /static/user_profile");
-        exit();
+    if (isset($_POST['fb_id_delete'])) {
+      q("
+        DELETE FROM `user2social`
+        WHERE `user_id` = '".(int)$_SESSION['user']['id']."'
+        AND `social_id` = 1               
+      ");
     }
+    $_SESSION['info'] = 'Данные о пользователе были изменены!';
+    header("Location: /static/user_profile");
+    exit();
+  }
 }
 
 if(isset($_POST['delete'])){
@@ -108,6 +113,18 @@ if(isset($_POST['delete_image'])){
     $_SESSION['info'] = 'фото было удалено из базы данных!';
     header("Location: /static/user_profile");
     exit();
+}
+
+$path = FB::URL_AUTH . "?" . "client_id=" . FB::CLIENT_ID . "&redirect_uri=" . urlencode(FB::REDIRECT_PROFILE) . "&auth_type=rerequest&scope=" . FB::SCOPE . "&response_type=code";
+if (isset($_GET['code'])) {
+  $fb = FB::faceBook($_GET['code'], FB::REDIRECT_PROFILE);
+  if(!empty($fb)) {
+    $_SESSION['info'] = 'Аккаунт FaceBook успешно добавлен в Ваш профиль!';
+  } else {
+    $errors['fb_user_id'] = 'Аккаунт FaceBook не добавлен в Ваш профиль!';
+  }
+  header("Location: /static/user_profile");
+  exit();
 }
 if(isset($_SESSION['info'])){
     $info = $_SESSION['info'];

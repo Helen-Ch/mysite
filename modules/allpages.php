@@ -14,7 +14,7 @@ if(isset($_SESSION['user'])){
     $name   = $_SESSION['user']['login'];
     $access = $_SESSION['user']['access'];
 
-    if($_SESSION['user']['active'] != 1){// проверка не забанен ли данный пользователь
+    if(isset($_SESSION['user']['active']) && $_SESSION['user']['active'] != 1){// проверка не забанен ли данный пользователь
         //  1-й способ выполнить выход
         include './cabinet/exit.php';
 

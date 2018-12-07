@@ -40,9 +40,11 @@
 				<a href="/chat" class="nav">chat</a>
                 <a href="/vatel" class="nav">Vatel</a>
 				<a href="/socials" class="nav">Socials</a>
+                <a href="/api" class="nav">API</a>
 				<!--<a href="/cabinet/registration" class="nav">reg</a>
                     <a href="/cabinet/authorization" class="nav">auth</a> without JS-->
 				<?php if (isset($_SESSION['user']) ){ ?>
+<!--                    <a href="/api" class="nav">API</a>-->
 					<!--<a href="/chat" class="nav">chat</a>-->
 					<?php if(!empty($_SESSION['user']['access']) && $_SESSION['user']['access'] == 5){ ?>
 						<a href="/admin" class="nav">admin</a>
@@ -90,9 +92,11 @@
 				<a href="/chat" class="nav">chat</a>
                 <a href="/vatel" class="nav">Vatel</a>
 				<a href="/socials" class="nav">Socials</a>
+                <a href="/api" class="nav">API</a>
 			<!--<a href="/cabinet/registration" class="nav">reg</a>
 				<a href="/cabinet/authorization" class="nav">auth</a> without JS-->
 				<?php if (isset($_SESSION['user']) ){ ?>
+<!--                    <a href="/api" class="nav">API</a>-->
 					<!--<a href="/chat" class="nav">chat</a>-->
 					<?php if(!empty($_SESSION['user']['access']) && $_SESSION['user']['access'] == 5){ ?>
 					<a href="/admin" class="nav">admin</a>
