@@ -5,3 +5,5 @@ Disallow: /libs
 Disallow: /vendor
 Disallow: /config.php
 Disallow: /variables.php
+Disallow: /skins/default/chat
+Disalow:  /skins/default/vatel

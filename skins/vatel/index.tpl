@@ -16,7 +16,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="format-detection" content="address=no">
-	<meta name="robots" content="index, follow">
+	<!--<meta name="robots" content="index, follow">-->
+	<meta name="robots" content="noindex, nofollow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="canonical" href="http://katrin.school-php.com/vatel">
 	<meta name="google-site-verification" content="L-MzxZjyYcMkEC4BdvnbPHIzDCRX4SbrrIagWe2ELb8"/>
