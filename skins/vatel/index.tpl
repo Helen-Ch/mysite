@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+	<!-- see at http://delicatos.kl.com.ua/vatel-->
 	<meta charset="UTF-8">
 	<link rel="dns-prefetch" href="http://katrin.school-php.com/vatel">
 	<link rel="dns-prefetch" href="/images/vatel-logo.png">
